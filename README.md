@@ -1,12 +1,12 @@
 # perldoc + Floaterm
 
-![demo/example.gif](Example)
+![Example](https://github.com/dzangfan/perldoc-float-vim/blob/master/demo/example.gif)
 
-This package is focked from [https://github.com/hotchpotch/perldoc-vim](perldoc-vim), and features [https://github.com/voldikss/vim-floaterm](float terminal) which allows you to `perldoc` as if in console.
+This package is focked from [perldoc-vim](https://github.com/hotchpotch/perldoc-vim), and features [float terminal](https://github.com/voldikss/vim-floaterm) which allows you to `perldoc` as if in console.
 
 ## Installation
 
-Install [https://github.com/voldikss/vim-floaterm](Floaterm) and ensure it works properly, in addition to your `perldoc` binary. You can test them briefly by
+Install [Floaterm](https://github.com/voldikss/vim-floaterm) and ensure it works properly, in addition to your `perldoc` binary. You can test them briefly by
 
 ```bash
 :FloatermNew
@@ -18,7 +18,7 @@ and
 perldoc -f say
 ```
 
-Then, install this package by the package manager you are using. For example, in [https://github.com/junegunn/vim-plug](vim-plug), add
+Then, install this package by the package manager you are using. For example, in [vim-plug](https://github.com/junegunn/vim-plug), add
 
 ```vim
 Plug 'dzangfan/perldoc-float-vim'

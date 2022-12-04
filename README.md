@@ -18,7 +18,7 @@ and
 perldoc -f say
 ```
 
-Then, install this package by the package manager you are using. For example, in [vim-plug](https://github.com/junegunn/vim-plug), add
+Then, install this package by package managers you are using. For example, in [vim-plug](https://github.com/junegunn/vim-plug), add
 
 ```vim
 Plug 'dzangfan/perldoc-float-vim'
@@ -28,7 +28,7 @@ to your plug-section and execute `:PlugInstall`.
 
 ## Usage
 
-The basic (and only) command is `Perldoc`, which accepts a builtin function name(e.g. `say`), package path(e.g. `List::Util`) or special variable(e.g. `$/`) and displays corresponding documents if exists. If no argument is provided, `Perldoc` will pick the word your cursor is pointing up. By default, we do not provide `keymap`. So if you want the effect in our demo, add
+The basic (and only) command is `Perldoc`, which accepts a builtin function name(e.g. `say`), package path(e.g. `List::Util`) or special variable(e.g. `$/`) and displays corresponding documents if exists. If no argument is provided, `Perldoc` will pick the word your cursor is pointing up. By default, we do not provide any `keymap`. So if you want the effect in our demo, add
 
 ```vim
 nnoremap <silent> * :Perldoc<CR>

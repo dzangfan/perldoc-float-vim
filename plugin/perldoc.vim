@@ -1,8 +1,3 @@
-if !exists(":FloatermNew")
-  echoerr "Cannot detect Floaterm, see <https://github.com/dzangfan/perldoc-float-vim> for more information about dependencies"
-  finish
-endif
-
 if exists("g:loaded_perldoc")
   finish
 endif
@@ -52,6 +47,10 @@ function! s:VarsExist(word)
 endfunction
 
 function! s:Perldoc(...)
+  if !exists(":FloatermNew")
+    echoerr "Cannot detect Floaterm, see <https://github.com/dzangfan/perldoc-float-vim> for more information about dependencies"
+    return
+  endif
   let word = join(a:000, ' ')
   if !strlen(word)
     let word = expand('<cword>')

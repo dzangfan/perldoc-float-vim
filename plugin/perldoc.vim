@@ -1,3 +1,8 @@
+if not exists(":FloatermNew")
+  echoerr "Cannot detect Floaterm, see <https://github.com/dzangfan/perldoc-float-vim> for more information about dependencies"
+  finish
+endif
+
 if exists("g:loaded_perldoc")
   finish
 endif

@@ -1,33 +1,37 @@
-# perldoc.vim
+# perldoc + Floaterm
 
-interface to perldoc. you can get perldoc with integrated operation for vim.
+![demo/example.gif](Example)
+
+This package is focked from [https://github.com/hotchpotch/perldoc-vim](perldoc-vim), and features [https://github.com/voldikss/vim-floaterm](float terminal) which allows you to `perldoc` as if in console.
+
+## Installation
+
+Install [https://github.com/voldikss/vim-floaterm](Floaterm) and ensure it works properly, in addition to your `perldoc` binary. You can test them briefly by
+
+```bash
+:FloatermNew
+```
+
+and
+
+```bash
+perldoc -f say
+```
+
+Then, install this package by the package manager you are using. For example, in [https://github.com/junegunn/vim-plug](vim-plug), add
+
+```vim
+Plug 'dzangfan/perldoc-float-vim'
+```
+
+to your plug-section and execute `:PlugInstall`.
 
 ## Usage
 
-### Modules
-```
-:Perldoc UNIVERSAL
-```
-Possible to complete names with `<tab>`
-
-### Functions
-```
-:Perldoc -f grep
-```
-
-### Variables
-```
-:Perldoc -v $$
-```
-
-## Configuration
-
-Set `g:perldoc_split_modifier` to specify modifier of new/split method like below.
+The basic (and only) command is `Perldoc`, which accepts a builtin function name(e.g. `say`), package path(e.g. `List::Util`) or special variable(e.g. `$/`) and displays corresponding documents if exists. If no argument is provided, `Perldoc` will pick the word your cursor is pointing up. By default, we do not provide `keymap`. So if you want the effect in our demo, add
 
 ```vim
-let g:perldoc_split_modifier = '10v'
+nnoremap <silent> * :Perldoc<CR>
 ```
 
-## Keymap
-
-Type K to open Perldoc on the keywords.
+to your configuration(i.e. `.vimrc`, `init.vim`, etc.).

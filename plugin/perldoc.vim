@@ -4,7 +4,7 @@ endif
 let g:loaded_perldoc = 1
 
 function! s:TermCmd(cmd)
-  execute "FloatermNew --autoclose=1 " . a:cmd
+  execute "FloatermNew --autoclose=1 --title=perldoc " . a:cmd
 endfunction
 
 function! s:PerldocWord(word)
